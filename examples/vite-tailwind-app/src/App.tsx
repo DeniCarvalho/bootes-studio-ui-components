@@ -1,7 +1,6 @@
 import './App.css'
-import 'shadcn-ui-library-starter/dist/style.css';
-import { Button, Avatar, AvatarFallback, AvatarImage, Alert, AlertDescription, AlertTitle } from 'shadcn-ui-library-starter';
-import { Terminal } from 'lucide-react';
+import '../../../dist/style.css';
+import { Button } from '../../../src/index';
 import { useState } from 'react';
 
 export default function App() {
@@ -12,45 +11,18 @@ export default function App() {
   };
 
   return (
-    <div className={`flex align-center justify-start ${mode} flex-col h-[100vh]`}>
-      <h1 className="text-3xl font-bold underline">
-        Built using shadcn-ui-library-starter
-      </h1>
-      <div className='py-4'>
-        <Button onClick={toggleDarkMode}>
-          <span>Toggle Dark Mode</span>
-        </Button>
-      </div>
-      <div className='py-4'>
-        <Button variant="destructive" className='text-orange-500'>Shadcn Button</Button>
-      </div>
-
-      <div className='py-4'>
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
-      </div>
-
-      <div className='py-4'>
-        <Alert>
-          <Terminal className="h-4 w-4" />
-          <AlertTitle>Heads up!</AlertTitle>
-          <AlertDescription>
-            You can add components and dependencies to your app using the cli.
-          </AlertDescription>
-        </Alert>
-      </div>
-
-      <div className='py-4'>
-        <ul className='text-left'>
-          <li> Feel free to add more components from ui.shadcn.com and build your own library.</li>
-          <br />
-          <li> Features:</li>
-          <li> - Tree-shakeable (components you don't use won't be included in your bundle)</li>
-          <li>- Dark mode support</li>
-          <li> - Override library styles with your own using tailwindcss or your own css</li>
-        </ul>
+    <div className={`h-full w-full ${mode}`}>
+      <div className={`h-full w-full flex justify-center items-center bg-background`}>
+        <div className={`flex flex-col align-center justify-center items-center`}>
+          <div className="text-3xl font-bold underline">
+            Built using shadcn-ui-library-starter
+          </div>
+          <div className='py-4'>
+            <Button onClick={toggleDarkMode} className='animate-pulse'>
+              <span>Toggle Dark Mode</span>
+            </Button>
+          </div>
+        </div>
       </div>
     </div>
   )
