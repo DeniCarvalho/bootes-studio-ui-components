@@ -1,5 +1,10 @@
-# shadcn-ui-lib-starter
-A simple starter kit to build your own shadcn-ui library using components from https://ui.shadcn.com/docs/components
+
+![Logo](https://bootes-studio.com/utils/logo.svg)
+
+
+# Bootes Studio UI Components
+
+UI library for React with Tailwind CSS, Vite, TypeScript and Shadcn-ui components.
 
 ### Features
 - Tree-shakeable (components you don't use won't be included in your bundle)

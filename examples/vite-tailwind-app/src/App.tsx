@@ -1,6 +1,7 @@
 import './App.css'
 import '../../../dist/style.css';
 import { Button } from '../../../src/index';
+// import { Button } from '../../../.'
 import { useState } from 'react';
 
 export default function App() {
