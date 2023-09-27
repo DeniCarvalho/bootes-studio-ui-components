@@ -24,10 +24,20 @@ export default defineConfig({
         ...Object.keys(peerDependencies),
         ...Object.keys(dependencies),
       ],
-      output: { preserveModules: true, exports: "named" },
+      output: {
+        preserveModules: true,
+        exports: "named",
+        // assetFileNames: "assets/[name].[ext]",
+      },
     },
 
     target: "esnext",
     sourcemap: true,
+  },
+  resolve: {
+    alias: {
+      "@/": `${resolve(__dirname, "src")}/`,
+      "@assets/": `${resolve(__dirname, "public")}/`,
+    },
   },
 });

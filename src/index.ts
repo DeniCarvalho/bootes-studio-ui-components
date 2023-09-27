@@ -1,7 +1,11 @@
-"use client";
+// Fonts
+import "@assets/fonts/satoshi/fonts.css";
 
-export { shadcnPlugin } from "./lib/shadcn-plugin";
+// Styles
+import "@assets/style.css";
 
-export { Button, buttonVariants, type ButtonProps } from "./components/Button";
-export { Avatar, AvatarFallback, AvatarImage } from "./components/Avatar";
-export { Alert, AlertDescription, AlertTitle } from "./components/Alert";
+// Lib
+export * from "@/lib";
+
+// Components
+export * from "@/components";

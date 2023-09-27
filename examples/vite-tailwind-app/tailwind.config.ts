@@ -1,10 +1,10 @@
 import type { Config } from "tailwindcss";
 
-import { shadcnPlugin } from "../../src/lib/shadcn-plugin";
+import { tailwindPlugin } from "../../.";
 
 const config = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  plugins: [shadcnPlugin],
+  plugins: [tailwindPlugin],
 } satisfies Config;
 
 export default config;

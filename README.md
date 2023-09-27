@@ -15,10 +15,32 @@ UI library for React with Tailwind CSS, Vite, TypeScript and Shadcn-ui component
 
 Run the example project and play around
 
-The example project has the published npm package linked so you do not really have to do a local npm link.
+Install dependencies:
 
 ```
+npm install
+
 cd examples/vite-tailwind-app
 npm install
+```
+
+The example project has the published npm package linked so you do not really have to do a local npm link. But if you want to test, just:
+
+```
+npm build
+npm link
+
+cd examples/vite-tailwind-app
+npm link bootes-studio-ui-components
 npm run dev
 ```
+## Stack used
+
+Vite, React, Tailwind CSS, TypeScript and Shadcn-ui
+
+
+## Used by
+
+
+- [Bootes Studio](https://bootes-studio.com/)
+

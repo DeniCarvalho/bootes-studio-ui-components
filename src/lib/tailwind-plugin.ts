@@ -2,7 +2,7 @@ import animatePlugin from "tailwindcss-animate";
 import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
-export const shadcnPlugin = plugin(
+export const tailwindPlugin = plugin(
   // 1. Add CSS variable definitions to the base layer
   function ({ addBase }) {
     addBase({
@@ -59,6 +59,8 @@ export const shadcnPlugin = plugin(
       body: {
         "@apply bg-background text-foreground": {},
         "font-feature-settings": '"rlig" 1, "calt" 1',
+        "-webkit-font-smoothing": "antialiased",
+        "-moz-osx-font-smoothing": "grayscale",
       },
     });
   },
@@ -117,7 +119,27 @@ export const shadcnPlugin = plugin(
           sm: "calc(var(--radius) - 4px)",
         },
         fontFamily: {
-          sans: ["var(--font-sans)", ...fontFamily.sans],
+          sans: [
+            // "Satoshi-Variable",
+            // "Satoshi-VariableItalic",
+            // "Satoshi-Light",
+            // "Satoshi-LightItalic",
+            // "Satoshi-Regular",
+            // "Satoshi-Italic",
+            // "Satoshi-Medium",
+            // "Satoshi-MediumItalic",
+            // "Satoshi-Bold",
+            // "Satoshi-BoldItalic",
+            // "Satoshi-Black",
+            // "Satoshi-BlackItalic",
+            "Satoshi-Variable",
+            "Satoshi-Light",
+            "Satoshi-Regular",
+            "Satoshi-Medium",
+            "Satoshi-Bold",
+            "Satoshi-Black",
+            ...fontFamily.sans,
+          ],
         },
         keyframes: {
           "accordion-down": {
