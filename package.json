@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run build:styles && tsc && vite build",
-    "build:styles": "postcss ./src/index.css -o ./public/style.css",
+    "build:styles": "npx tailwindcss@latest -i ./src/index.css -o ./public/style.css --postcss --no-autoprefixer -m",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "peerDependencies": {

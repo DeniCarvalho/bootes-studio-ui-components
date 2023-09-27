@@ -1,5 +1,5 @@
 import animatePlugin from "tailwindcss-animate";
-import { fontFamily } from "tailwindcss/defaultTheme";
+// import { fontFamily } from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 
 export const tailwindPlugin = plugin(
@@ -47,6 +47,7 @@ export const tailwindPlugin = plugin(
         "--secondary-foreground": "210 40% 98%",
         "--destructive": "0 63% 31%",
         "--destructive-foreground": "210 40% 98%",
+        "--text-foreground": "0 100% 100%",
         "--ring": "216 34% 17%",
         "--radius": "0.5rem",
       },
@@ -119,27 +120,7 @@ export const tailwindPlugin = plugin(
           sm: "calc(var(--radius) - 4px)",
         },
         fontFamily: {
-          sans: [
-            // "Satoshi-Variable",
-            // "Satoshi-VariableItalic",
-            // "Satoshi-Light",
-            // "Satoshi-LightItalic",
-            // "Satoshi-Regular",
-            // "Satoshi-Italic",
-            // "Satoshi-Medium",
-            // "Satoshi-MediumItalic",
-            // "Satoshi-Bold",
-            // "Satoshi-BoldItalic",
-            // "Satoshi-Black",
-            // "Satoshi-BlackItalic",
-            "Satoshi-Variable",
-            "Satoshi-Light",
-            "Satoshi-Regular",
-            "Satoshi-Medium",
-            "Satoshi-Bold",
-            "Satoshi-Black",
-            ...fontFamily.sans,
-          ],
+          display: ["Satoshi", "sans-serif"],
         },
         keyframes: {
           "accordion-down": {

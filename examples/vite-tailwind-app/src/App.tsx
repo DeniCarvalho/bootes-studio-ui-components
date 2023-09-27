@@ -59,7 +59,7 @@ export default function App() {
     // </div>
     <div className="space-y-6 p-10 pb-16 h-full w-full">
       <div className="space-y-0.5">
-        <h2 className="text-5xl font-bold">Settings</h2>
+        <h2 className="text-5xl font-bold font-display">Free Stock</h2>
         <p className="text-muted-foreground">
           Manage your account settings and set e-mail preferences.
         </p>
