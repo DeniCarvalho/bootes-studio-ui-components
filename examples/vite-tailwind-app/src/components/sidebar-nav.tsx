@@ -1,6 +1,6 @@
 
-import { buttonVariants, cn } from "../../../../."
-import { useEffect, useState } from "react"
+import { buttonVariants, cn } from "bootes-studio-ui-components"
+import { Link, useLocation } from "react-router-dom"
 
 interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
     items: {
@@ -10,11 +10,7 @@ interface SidebarNavProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
-    const [pathname, setPathname] = useState('/');
-
-    useEffect(() => {
-        setPathname(window.location.pathname);
-    }, [pathname]);
+    let location = useLocation();
 
     return (
         <nav
@@ -25,19 +21,19 @@ export function SidebarNav({ className, items, ...props }: SidebarNavProps) {
             {...props}
         >
             {items.map((item) => (
-                <a
+                <Link
                     key={item.href}
-                    href={item.href}
+                    to={item.href}
                     className={cn(
                         buttonVariants({ variant: "ghost" }),
-                        pathname === item.href
+                        location.pathname === item.href
                             ? "bg-muted hover:bg-muted"
                             : "hover:bg-transparent hover:underline",
                         "justify-start"
                     )}
                 >
                     {item.title}
-                </a>
+                </Link>
             ))}
         </nav>
     )
